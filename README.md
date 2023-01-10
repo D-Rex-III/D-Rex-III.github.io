@@ -1,1 +1,1 @@
-GitHub pages used to display my repos in a clean and concise webpage.
+GitHub pages used to resume in a clean and concise webpage.
