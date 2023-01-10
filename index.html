@@ -21,10 +21,12 @@
 	<link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="css/contact-form.css">
 
    <!-- Script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
+   <script src="js/init.js"></script>
 
    <!-- Favicons
 	================================================== -->
@@ -254,48 +256,44 @@
 
          <div class="row">
 
-            <div class="eight columns">
+            <div class="fcf-body">
 
-               <!-- form -->
-               <form action="" method="post" id="contactForm" name="contactForm">
-					<fieldset>
+               <div id="fcf-form">
+               <h3 class="fcf-h3">Contact us</h3>
 
-                  <div>
-						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactName" name="contactName">
-                  </div>
+               <form id="fcf-form-id" class="fcf-form-class" method="post" action="inc/contact-form-process.php">
+                     
+                     <div class="fcf-form-group">
+                        <label for="Name" class="fcf-label">Your Name:</label>
+                        <div class="fcf-input-group">
+                           <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                        </div>
+                     </div>
 
-                  <div>
-						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-                  </div>
+                     <div class="fcf-form-group">
+                        <label for="Email" class="fcf-label">Your Email Address:</label>
+                        <div class="fcf-input-group">
+                           <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                        </div>
+                     </div>
 
-                  <div>
-						   <label for="contactSubject">Subject</label>
-						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-                  </div>
+                     <div class="fcf-form-group">
+                        <label for="Message" class="fcf-label">Your Message:</label>
+                        <div class="fcf-input-group">
+                           <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                        </div>
+                     </div>
 
-                  <div>
-                     <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
+                     <div class="fcf-form-group">
+                        <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+                     </div>
 
-                  <div>
-                     <button class="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span>
-                  </div>
+                     <!-- <div class="fcf-credit" id="fcf-credit">
+                     Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
+                     </div> -->
 
-					</fieldset>
-				   </form> <!-- Form End -->
-
-               <!-- contact-warning -->
-               <div id="message-warning"> Error boy</div>
-               <!-- contact-success -->
-				   <div id="message-success">
-                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-				   </div>
+               </form>
+               </div>
 
             </div>
 
@@ -314,8 +312,6 @@
 				   </div>
 
             </aside>
-
-      </div>
 
    </section> <!-- Contact Section End-->
 

@@ -137,14 +137,14 @@
 /*	contact form
 ------------------------------------------------------*/
 
-   $('form#contactForm button.submit').click(function() {
+   $('form#contact_form button.submit').click(function(submit) {
 
       $('#image-loader').fadeIn();
 
-      var contactName = $('#contactForm #contactName').val();
-      var contactEmail = $('#contactForm #contactEmail').val();
-      var contactSubject = $('#contactForm #contactSubject').val();
-      var contactMessage = $('#contactForm #contactMessage').val();
+      var contactName = $('#contact_form #contactName').val();
+      var contactEmail = $('#contact_form #contactEmail').val();
+      var contactSubject = $('#contact_form #contactSubject').val();
+      var contactMessage = $('#contact_form #contactMessage').val();
 
       var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
                '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
@@ -160,7 +160,7 @@
             if (msg == 'OK') {
                $('#image-loader').fadeOut();
                $('#message-warning').hide();
-               $('#contactForm').fadeOut();
+               $('#contact_form').fadeOut();
                $('#message-success').fadeIn();   
             }
             // There was an error
